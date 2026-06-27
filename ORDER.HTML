@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER NOW</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="tomo-order">
+<div class="tomo-container">
+
+  <header class="tomo-header">
+    <div class="tomo-icon-circle">&#8635;</div>
+    <h1>ORDER NOW</h1>
+    <div class="tomo-divider"><span></span><div class="tomo-dot"></div><span></span></div>
+    <p>Choose your favorite and we'll make it for you.</p>
+  </header>
+
+  <div class="tomo-main-grid">
+    <div>
+      <div class="tomo-section-title">SELECT OPTIONS</div>
+      <div class="tomo-tabs">
+        <div class="tomo-tab tomo-active" onclick="tomoSwitchTab(this,'tomo-coffee')">☕ COFFEE</div>
+        <div class="tomo-tab" onclick="tomoSwitchTab(this,'tomo-milkshake')">🥤 MILK SHAKE</div>
+      </div>
+
+      <div id="tomo-coffee">
+        <div class="tomo-category">COFFEE</div>
+
+        <div class="tomo-item" data-price="2.00" onclick="tomoSelectItem(this)">
+          <img src="coffes.jpg" alt="Espresso">
+          <div class="tomo-item-info">
+            <h3>Espresso</h3>
+            <p>Strong and bold single shot.</p>
+          </div>
+          <div class="tomo-item-price">2.00 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+
+        <div class="tomo-item" data-price="2.50" onclick="tomoSelectItem(this)">
+          <img src="americano.jpg" alt="Americano">
+          <div class="tomo-item-info">
+            <h3>Americano</h3>
+            <p>Expresso with hot water.</p>
+          </div>
+          <div class="tomo-item-price">2.50 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+
+        <div class="tomo-item" data-price="3.50" onclick="tomoSelectItem(this)">
+          <img src="latte.jpg" alt="Latte">
+          <div class="tomo-item-info">
+            <h3>Latte</h3>
+            <p>Espresso with steamed milk.</p>
+          </div>
+          <div class="tomo-item-price">3.50 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+
+        <div class="tomo-item" data-price="3.50" onclick="tomoSelectItem(this)">
+          <img src="capochino.jpg" alt="Cappuccino">
+          <div class="tomo-item-info">
+            <h3>Cappuccino</h3>
+            <p>Equal parts espresso, milk and foam.</p>
+          </div>
+          <div class="tomo-item-price">3.50 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+
+        <div class="tomo-item" data-price="4.00" onclick="tomoSelectItem(this)">
+          <img src="mocha.jpg" alt="Mocha">
+          <div class="tomo-item-info">
+            <h3>Mocha</h3>
+            <p>Espresso with chocolate and milk.</p>
+          </div>
+          <div class="tomo-item-price">4.00 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+      </div>
+
+      <div id="tomo-milkshake" style="display:none;">
+        <div class="tomo-category">MILK SHAKE</div>
+
+        <div class="tomo-item" data-price="4.50" onclick="tomoSelectItem(this)">
+          <img src="mmms.jpg" alt="Chocolate Milk Shake">
+          <div class="tomo-item-info">
+            <h3>Chocolate Milk Shake</h3>
+            <p>Creamy chocolate shake.</p>
+          </div>
+          <div class="tomo-item-price">5.0 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+
+        <div class="tomo-item" data-price="4.50" onclick="tomoSelectItem(this)">
+          <img src="ms.jpg" alt="Strawberry Milk Shake">
+          <div class="tomo-item-info">
+            <h3>Strawberry Milk Shake</h3>
+            <p>Fresh and fruity strawberry shake.</p>
+          </div>
+          <div class="tomo-item-price">5.0 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+
+        <div class="tomo-item" data-price="4.50" onclick="tomoSelectItem(this)">
+<img src="msmms.jpg" alt="Caramel Milk Shake">
+          <div class="tomo-item-info">
+            <h3>Caramel Milk Shake</h3>
+            <p>Sweet caramel drizzle shake.</p>
+          </div>
+          <div class="tomo-item-price">5.0 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+        <div class="tomo-item" data-price="4.50" onclick="tomoSelectItem(this)">
+          <img src="mmssss.jpg" alt="Blueberry Milk Shake">
+          <div class="tomo-item-info">
+            <h3>Blueberry Milk Shake</h3>
+            <p>Fresh and fruity Blueberry shake.</p>
+          </div>
+          <div class="tomo-item-price">5.0 €</div>
+          <div class="tomo-radio"></div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="tomo-sidebar">
+      <h2>CUSTOMIZE YOUR ORDER</h2>
+      <label>Any modification or special instructions?</label>
+      <textarea id="tomo-notes" maxlength="200" placeholder="Example: No sugar, extra shot, almond milk, etc." oninput="tomoUpdateCount()"></textarea>
+      <div class="tomo-char-row">
+        <span>(Optional)</span>
+        <span id="tomo-count">0/200</span>
+      </div>
+      <button class="tomo-order-btn" onclick="tomoPlaceOrder()">🛍 ORDER NOW</button>
+    </aside>
+  </div>
+
+  <footer class="tomo-footer">
+    <div class="tomo-divider"><span></span><div>&#8635;</div><span></span></div>
+    <p>Thank you for supporting Biguine Coffee Shop!</p>
+  </footer>
+
+</div>
+</div>
+<script>
+  function tomoSwitchTab(el, target){
+    document.querySelectorAll('.tomo-tab').forEach(t=>t.classList.remove('tomo-active'));
+    el.classList.add('tomo-active');
+    document.getElementById('tomo-coffee').style.display = target==='tomo-coffee' ? 'block':'none';
+    document.getElementById('tomo-milkshake').style.display = target==='tomo-milkshake' ? 'block':'none';
+  }
+
+  let tomoSelected = null;
+  function tomoSelectItem(el){
+    document.querySelectorAll('.tomo-radio').forEach(r=>r.classList.remove('tomo-selected'));
+    el.querySelector('.tomo-radio').classList.add('tomo-selected');
+    tomoSelected = el;
+  }
+
+  function tomoUpdateCount(){
+    const ta = document.getElementById('tomo-notes');
+    document.getElementById('tomo-count').textContent = ta.value.length + '/200';
+  }
+
+  function tomoPlaceOrder(){
+    if(!tomoSelected){
+      alert('Please select an item first!');
+      return;
+    }
+    const name = tomoSelected.querySelector('h3').textContent;
+    const price = tomoSelected.querySelector('.tomo-item-price').textContent;
+    alert('Order placed: ' + name + ' (' + price + ')');
+  }
+</script>
+    
+</body>
+</html>

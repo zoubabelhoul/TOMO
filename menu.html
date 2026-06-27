@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomo Coffee Brunch — Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+  <header class="menu-header">
+    <div class="bean bean-left" aria-hidden="true">❖</div>
+    <h1>Menu</h1>
+    <div class="bean bean-right" aria-hidden="true">❖</div>
+  </header>
+
+  <!-- ================= COFFEE ================= -->
+  <section class="category" aria-label="Coffee">
+    <div class="category-title">
+      <span class="cup-icon" aria-hidden="true">☕</span>
+      <h2>Coffee</h2>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <button class="arrow arrow-left" data-dir="-1" aria-label="Voir les boissons précédentes">&#8592;</button>
+
+      <div class="carousel-viewport">
+        <ul class="carousel-track" data-track>
+
+          <li class="card">
+            <div class="card-photo">
+              <img src="latte.jpg" alt="Latte avec un dessin en lait">
+            </div>
+            <p class="card-name">Latte</p>
+            <p class="card-price">3,50 €</p>
+          </li>
+
+          <li class="card">
+            <div class="card-photo">
+              <img src="americano.jpg" alt="Americano servi dans une tasse blanche">
+            </div>
+            <p class="card-name">Americano</p>
+            <p class="card-price">2,50 €</p>
+          </li>
+
+          <li class="card">
+            <div class="card-photo">
+              <img src="coffes.jpg" alt="Caramel Coffee glacé avec chantilly et caramel">
+            </div>
+            <p class="card-name">Classic</p>
+            <p class="card-price">2,00 €</p>
+          </li>
+
+          <!--
+            Pour ajouter une nouvelle boisson :
+            copie un <li class="card"> entier ci-dessus et change l'image, le nom et le prix.
+            Le carousel s'adapte automatiquement au nombre de cartes.
+          -->
+
+        </ul>
+      </div>
+
+      <button class="arrow arrow-right" data-dir="1" aria-label="Voir les boissons suivantes">&#8594;</button>
+    </div>
+
+    <div class="dots" data-dots></div>
+  </section>
+
+  <!-- ================= MILLIONS SHAKE ================= -->
+  <section class="category" aria-label="Millions Shake">
+    <div class="category-title">
+      <span class="cup-icon" aria-hidden="true">🥤</span>
+      <h2>Millions Shake</h2>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <button class="arrow arrow-left" data-dir="-1" aria-label="Voir les milkshakes précédents">&#8592;</button>
+
+      <div class="carousel-viewport">
+        <ul class="carousel-track" data-track>
+
+          <li class="card">
+            <div class="card-photo">
+              <img src="mmms.jpg" alt="Chocolate Shake avec chantilly et cerise">
+            </div>
+            <p class="card-name">Chocolate Shake</p>
+            <p class="card-price">5,00 €</p>
+          </li>
+
+          <li class="card">
+            <div class="card-photo">
+              <img src="msmms.jpg" alt="Caramel Shake avec sauce caramel">
+            </div>
+            <p class="card-name">Caramel Shake</p>
+            <p class="card-price">5,00 €</p>
+          </li>
+
+          <li class="card">
+            <div class="card-photo">
+              <img src="ms.jpg" alt="Strawberry Shake avec fraise fraîche">
+            </div>
+            <p class="card-name">Strawberry Shake</p>
+            <p class="card-price">5,00 €</p>
+          </li>
+          <li class="card">
+            <div class="card-photo>
+                <img src="mmssss.jpg" alt="bleuberry">
+               
+            </div>
+            <p class="card-name">Blueberry Shake</p>
+            <p class="card-price">5,5 €</p>
+          </li>
+
+        </ul>
+      </div>
+
+      <button class="arrow arrow-right" data-dir="1" aria-label="Voir les milkshakes suivants">&#8594;</button>
+    </div>
+
+    <div class="dots" data-dots></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
